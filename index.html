@@ -54,47 +54,49 @@
       </section>
 
       <section id="installation">
-  <h2>3. Installation Guide</h2>
-  <ol>
-    <li>
-      Download EVA Firmware (2.11) 👉
-      <a href="https://raxtechcom-my.sharepoint.com/:u:/g/personal/kaarthikeyan_raxgbc_co_in/EWzqfdszWAZPqqQ2wgbBLkUBl6_y512C29w90Q9ULqLhzA?e=TF8Z9m"
-        class="download-btn" target="_blank">
-        ⬇️ Download EVA Package
-      </a>
-    </li>
-    <li>Extract the Firmware Package.</li>
-    <li>Move the Firmware to device via Filezilla.</li>
-    <li>
-      Download Filezilla Software 👉
-      <a href="https://filezilla-project.org/download.php?type=client" class="download-btn" target="_blank">
-        ⬇️ Download Filezilla
-      </a>
-    </li>
-    <li>Install Filezilla on your computer.</li>
-    <li>
-      Connect to the device using Filezilla.
-      <a class="openModal" data-img="images/FilezillaConnect.png"> View Image</a>
-    </li>
-    <li> Once Device Connected. Create a New directory for the firmware name as "EVA" under the ( /home/pi ) in EVA Device.
-      <a class="openModal" data-img="images/NewDirectory.png">View Image</a>
-    </li>
-    <li> Drag and Drop the Firmware file to the EVA directory which you created in the above step.
-      <a class="openModal" data-img="images/firmdd.png">View Image </a>
-    </li>
-    <li>
-      Download Putty Software 👉
-      <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" class="download-btn" target="_blank">
-        ⬇️ Download Putty
-      </a>
-      <ul>
+        <h2>3. Installation Guide</h2>
+        <ol>
+          <li>
+            Download EVA Firmware (2.11) 👉
+            <a href="https://raxtechcom-my.sharepoint.com/:u:/g/personal/kaarthikeyan_raxgbc_co_in/EWzqfdszWAZPqqQ2wgbBLkUBl6_y512C29w90Q9ULqLhzA?e=TF8Z9m"
+              class="download-btn" target="_blank">
+              ⬇️ Download EVA Package
+            </a>
+          </li>
+          <li>Extract the Firmware Package.</li>
+          <li>Move the Firmware to device via Filezilla.</li>
+          <li>
+            Download Filezilla Software 👉
+            <a href="https://filezilla-project.org/download.php?type=client" class="download-btn" target="_blank">
+              ⬇️ Download Filezilla
+            </a>
+          </li>
+          <li>Install Filezilla on your computer.</li>
+          <li>
+            Connect to the device using Filezilla.
+            <a class="openModal" data-img="images/FilezillaConnect.png"> View Image</a>
+          </li>
+          <li> Once Device Connected. Create a New directory for the firmware name as "EVA" under the ( /home/pi ) in
+            EVA Device.
+            <a class="openModal" data-img="images/NewDirectory.png">View Image</a>
+          </li>
+          <li> Drag and Drop the Firmware file to the EVA directory which you created in the above step.
+            <a class="openModal" data-img="images/firmdd.png">View Image </a>
+          </li>
+          <li>
+            Download Putty Software 👉
+            <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" class="download-btn"
+              target="_blank">
+              ⬇️ Download Putty
+            </a>
+            <ul>
               <li>
                 <strong>Steps to Connect:</strong>
                 <ol>
                   <li>Open Putty and enter the Device IP address.</li>
                   <li>Select SSH as the connection type.</li>
                   <li>Click on Open to initiate the connection.
-                  <a class="openModal" data-img="images/putty.png">View Image</a>
+                    <a class="openModal" data-img="images/putty.png">View Image</a>
                 </ol>
               </li>
               <li>
@@ -106,32 +108,36 @@
                 </ol>
               </li>
             </ul>
-    </li>
+          </li>
 
-    <li>
-  <div class="note-box">
-  <strong>Note:</strong> If Firmware is already there in the Device, follow the process 👇
-  <ul>
-    <li>Backup the <b>(/home/pi/EVA)</b> <code>mc.cpython-311-aarch64-linux-gnu.so</code> file from the existing firmware directory. <span class="mandatory">(Mandatory to backup this file!)</span></li>
-    <li>Delete the Existing Firmware from the device.</li>
-    <li>Replace the latest firmware in the existing EVA Folder
-      <a class="openModal" data-img="images/macdd.png">View Image</a>
-    </li>
-  </ul>
-</div>
-</li>
-    <li> The Device Setup has Completed Successfully. 👍</li>
-    <li> Next Configuration Steps </li>
-  </ol>
-</section>
+          <li>
+            <div class="note-box">
+              <strong>Note:</strong> If Firmware is already there in the Device, follow the process 👇
+              <ul>
+                <li>Backup the <b>(/home/pi/EVA)</b> <code>mc.cpython-311-aarch64-linux-gnu.so</code> file from the
+                  existing firmware directory. <span class="mandatory">(Mandatory to backup this file!)</span></li>
+                <li>Delete the Existing Firmware from the device.</li>
+                <li>Replace the latest firmware in the existing EVA Folder
+                  <a class="openModal" data-img="images/macdd.png">View Image</a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-<div id="instructionModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Instruction</h2>
-    <img id="modalImage" src="" alt="Instruction Image">
-  </div>
-</div>
+
+
+          <li> The Device Setup has Completed Successfully. 👍</li>
+          <li> Next Configuration Steps </li>
+        </ol>
+      </section>
+
+      <div id="instructionModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Instruction</h2>
+          <img id="modalImage" src="" alt="Instruction Image">
+        </div>
+      </div>
 
 
       <section id="config-steps">
@@ -153,17 +159,39 @@
               <li>In Filezilla Click on YES to reflect the changes in files.</li>
             </ul>
           </li> <br>
-          <li>After Changing the Config.json and Host.json files, restart the EVA Device to apply the changes.</li>
+          <li>After Changing the Config.json and Host.json files, restart the EVA Device to apply the changes.</li><br>
+          <li>
+            <strong>Utility Setup:</strong>
+            <ol>
+              <li>Open the Browser.</li>
+              <li>Enter the Device IP followed by the port number (e.g.,
+                <code>&nbsp;http://192.168.1.219:3000&nbsp;</code>).</li>
+              <li>Utility will open.
+                <a class="openModal" data-img="images/Utility.png">View Image</a>
+              </li>
+              <li>Fill the Device IP and Port and click on connect.
+                <a class="openModal" data-img="images/UtilityConnect.png">View Image</a>
+              </li>
+              <li> Once connected, you can access the utility features. change the required settings as needed in
+                utility.</li>
+              <li>Once you have made the necessary changes, Click on Update to apply the changes.</li>
+              <li>Once Update device will restart, you will need to reconnect to the utility.</li>
+              <li> After reconnecting, verify that the changes have been applied successfully.</li>
+            </ol>
+          </li>
         </ol>
+
+
       </section>
 
       <section id="network-setup">
         <h2>5. Network Setup</h2>
         <ul>
-          <li> If Device Connected locally, If the device IP series is 1, the local IP should be in the same series.</li>
+          <li> If Device Connected locally, If the device IP series is 1, the local IP should be in the same series.
+          </li>
           <li> If Device Connected remotely, ensure proper port forwarding is set up.</li>
           <li> Use <code>ping</code> to test connectivity.</li>
-           <li> Use <code>telnet</code> to test Communication.</li>
+          <li> Use <code>telnet</code> to test Communication.</li>
           <li> Check <code>ifconfig</code> for correct IP assignment.</li>
         </ul>
       </section>
@@ -171,10 +199,10 @@
       <section id="troubleshooting">
         <h2>6. Troubleshooting</h2>
         <ul>
-          <li>🔴 Please Contact Vendor → 
-           <a class="openModal" data-img="images/Contactvendor.png"> View Image</a>
+          <li>🔴 Please Contact Vendor →
+            <a class="openModal" data-img="images/Contactvendor.png"> View Image</a>
 
-           Contact the Support Team to resolve the issue.
+            Contact the Support Team to resolve the issue.
           </li>
           <li>🔄 Configuration error → Check <code>config.json file</code> in <b>(/home/pi/EVA)</b></li>
           <li>🌐 Network unreachable → Check IP and DHCP settings <b>(/etc/dhcpcd.conf)</b></li>
@@ -209,7 +237,7 @@
       </section>
 
       <footer>
-        <p> <strong>EVA Documentation   • Generated on 23-08-2025 </strong></p>
+        <p> <strong>EVA Documentation • Generated on 23-08-2025 </strong></p>
         <p> <strong>© 2025 Rax-Tech International. All rights reserved. | Version 1.0</strong></p>
       </footer>
     </main>
@@ -219,5 +247,3 @@
 </body>
 
 </html>
-
-
