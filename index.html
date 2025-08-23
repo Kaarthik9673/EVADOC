@@ -114,7 +114,7 @@
             <div class="note-box">
               <strong>Note:</strong> If Firmware is already there in the Device, follow the process 👇
               <ul>
-                <li>Backup the <b>(/home/pi/EVA)</b> <code>mc.cpython-311-aarch64-linux-gnu.so</code> file from the
+                <li>Backup the <b>(/home/pi/EVA)</b> <code>&nbsp;mc.cpython-311-aarch64-linux-gnu.so&nbsp;</code> file from the
                   existing firmware directory. <span class="mandatory">(Mandatory to backup this file!)</span></li>
                 <li>Delete the Existing Firmware from the device.</li>
                 <li>Replace the latest firmware in the existing EVA Folder
@@ -179,6 +179,16 @@
               <li> After reconnecting, verify that the changes have been applied successfully.</li>
             </ol>
           </li>
+          <li>
+            <strong>Putty Setup:</strong>
+            <ol>
+              <li>Open Putty.</li>
+              <li>Enter the Device IP and Port (e.g., <code>&nbsp;192.168.1.219:22&nbsp;</code>).</li>
+              <li>Click on Open to start the SSH session.</li>
+              <li>Login with username: <code>&nbsp;pi&nbsp;</code> and password: <code>&nbsp;ave&nbsp;</code>.</li>
+              <li>Once logged in, Wait for EVA to initialize.</li>
+            </ol>
+          </li>
         </ol>
 
 
@@ -190,9 +200,9 @@
           <li> If Device Connected locally, If the device IP series is 1, the local IP should be in the same series.
           </li>
           <li> If Device Connected remotely, ensure proper port forwarding is set up.</li>
-          <li> Use <code>ping</code> to test connectivity.</li>
-          <li> Use <code>telnet</code> to test Communication.</li>
-          <li> Check <code>ifconfig</code> for correct IP assignment.</li>
+          <li> Use <code>&nbsp;ping&nbsp;</code> to test connectivity.</li>
+          <li> Use <code>&nbsp;telnet&nbsp;</code> to test Communication.</li>
+          <li> Check <code>&nbsp;ifconfig&nbsp;</code> for correct IP assignment.</li>
         </ul>
       </section>
 
@@ -204,7 +214,7 @@
 
             Contact the Support Team to resolve the issue.
           </li>
-          <li>🔄 Configuration error → Check <code>config.json file</code> in <b>(/home/pi/EVA)</b></li>
+          <li>🔄 Configuration error → Check <code>&nbsp;config.json file&nbsp;</code> in <b>(/home/pi/EVA)</b></li>
           <li>🌐 Network unreachable → Check IP and DHCP settings <b>(/etc/dhcpcd.conf)</b></li>
         </ul>
       </section>
