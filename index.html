@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EVA Device Configuration & Troubleshooting</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -26,15 +27,16 @@
         <li><a href="#config-steps" onclick="closeMenu()">4. Configuration Steps</a></li>
         <li><a href="#network-setup" onclick="closeMenu()">5. Network Setup</a></li>
         <li><a href="#troubleshooting" onclick="closeMenu()">6. Troubleshooting</a></li>
-        <li><a href="#commands" onclick="closeMenu()">7. Commands Reference</a></li>
-        <li><a href="#Contact" onclick="closeMenu()">8. Contact</a></li>
+        <li><a href="#customAudio" onclick="closeMenu()">7. Custom Audio Generator</a></li>
+        <li><a href="#commands" onclick="closeMenu()">8. Commands Reference</a></li>
+        <li><a href="#Contact" onclick="closeMenu()">9. Contact</a></li>
       </ul>
     </nav>
 
     <main class="container">
       <header>
         <h1>EVA Device Configuration & Troubleshooting</h1>
-        <p>Installation Guide • Issue Resolution • Troubleshoot </p>
+        <p>Deployment Guide • Issue Resolution • Security • Monitoring</p>
       </header>
 
       <section id="device-info">
@@ -74,58 +76,29 @@
           <li>Install Filezilla on your computer.</li>
           <li>
             Connect to the device using Filezilla.
-            <a class="openModal" data-img="images/FilezillaConnect.png"> View Image</a>
+            <a class="openModal" data-img="images/FilezillaConnect.png"> Check here for instruction</a>
           </li>
           <li> Once Device Connected. Create a New directory for the firmware name as "EVA" under the ( /home/pi ) in
             EVA Device.
-            <a class="openModal" data-img="images/NewDirectory.png">View Image</a>
+            <a class="openModal" data-img="images/NewDirectoryinEVA.png">Check here for instruction</a>
           </li>
           <li> Drag and Drop the Firmware file to the EVA directory which you created in the above step.
-            <a class="openModal" data-img="images/firmdd.png">View Image </a>
-          </li>
-          <li>
-            Download Putty Software 👉
-            <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" class="download-btn"
-              target="_blank">
-              ⬇️ Download Putty
-            </a>
-            <ul>
-              <li>
-                <strong>Steps to Connect:</strong>
-                <ol>
-                  <li>Open Putty and enter the Device IP address.</li>
-                  <li>Select SSH as the connection type.</li>
-                  <li>Click on Open to initiate the connection.
-                    <a class="openModal" data-img="images/putty.png">View Image</a>
-                </ol>
-              </li>
-              <li>
-                <strong>Login Steps:</strong>
-                <ol>
-                  <li>Enter Username of the device. -> <code> &nbsp; pi &nbsp; </code></li>
-                  <li>Enter Password of the Device. -> <code> &nbsp; ave &nbsp; </code></li>
-                  <li>Click Enter to log in.</li>
-                </ol>
-              </li>
-            </ul>
+            <a class="openModal" data-img="images/firmd&d.png">Check here for instruction</a>
           </li>
 
           <li>
             <div class="note-box">
               <strong>Note:</strong> If Firmware is already there in the Device, follow the process 👇
               <ul>
-                <li>Backup the <b>(/home/pi/EVA)</b> <code>&nbsp;mc.cpython-311-aarch64-linux-gnu.so&nbsp;</code> file from the
+                <li>Backup the <b>(/home/pi/EVA)</b> <code>mc.cpython-311-aarch64-linux-gnu.so</code> file from the
                   existing firmware directory. <span class="mandatory">(Mandatory to backup this file!)</span></li>
                 <li>Delete the Existing Firmware from the device.</li>
                 <li>Replace the latest firmware in the existing EVA Folder
-                  <a class="openModal" data-img="images/macdd.png">View Image</a>
+                  <a class="openModal" data-img="images/macd&d.png">Check here for instruction</a>
                 </li>
               </ul>
             </div>
           </li>
-
-
-
           <li> The Device Setup has Completed Successfully. 👍</li>
           <li> Next Configuration Steps </li>
         </ol>
@@ -159,39 +132,8 @@
               <li>In Filezilla Click on YES to reflect the changes in files.</li>
             </ul>
           </li> <br>
-          <li>After Changing the Config.json and Host.json files, restart the EVA Device to apply the changes.</li><br>
-          <li>
-            <strong>Utility Setup:</strong>
-            <ol>
-              <li>Open the Browser.</li>
-              <li>Enter the Device IP followed by the port number (e.g.,
-                <code>&nbsp;http://192.168.1.219:3000&nbsp;</code>).</li>
-              <li>Utility will open.
-                <a class="openModal" data-img="images/Utility.png">View Image</a>
-              </li>
-              <li>Fill the Device IP and Port and click on connect.
-                <a class="openModal" data-img="images/UtilityConnect.png">View Image</a>
-              </li>
-              <li> Once connected, you can access the utility features. change the required settings as needed in
-                utility.</li>
-              <li>Once you have made the necessary changes, Click on Update to apply the changes.</li>
-              <li>Once Update device will restart, you will need to reconnect to the utility.</li>
-              <li> After reconnecting, verify that the changes have been applied successfully.</li>
-            </ol>
-          </li>
-          <li>
-            <strong>Putty Setup:</strong>
-            <ol>
-              <li>Open Putty.</li>
-              <li>Enter the Device IP and Port (e.g., <code>&nbsp;192.168.1.219:22&nbsp;</code>).</li>
-              <li>Click on Open to start the SSH session.</li>
-              <li>Login with username: <code>&nbsp;pi&nbsp;</code> and password: <code>&nbsp;ave&nbsp;</code>.</li>
-              <li>Once logged in, Wait for EVA to initialize.</li>
-            </ol>
-          </li>
+          <li>After Changing the Config.json and Host.json files, restart the EVA service to apply the changes.</li>
         </ol>
-
-
       </section>
 
       <section id="network-setup">
@@ -200,9 +142,9 @@
           <li> If Device Connected locally, If the device IP series is 1, the local IP should be in the same series.
           </li>
           <li> If Device Connected remotely, ensure proper port forwarding is set up.</li>
-          <li> Use <code>&nbsp;ping&nbsp;</code> to test connectivity.</li>
-          <li> Use <code>&nbsp;telnet&nbsp;</code> to test Communication.</li>
-          <li> Check <code>&nbsp;ifconfig&nbsp;</code> for correct IP assignment.</li>
+          <li> Use <code>ping</code> to test connectivity.</li>
+          <li> Use <code>telnet</code> to test Communication.</li>
+          <li> Check <code>ifconfig</code> for correct IP assignment.</li>
         </ul>
       </section>
 
@@ -210,17 +152,45 @@
         <h2>6. Troubleshooting</h2>
         <ul>
           <li>🔴 Please Contact Vendor →
-            <a class="openModal" data-img="images/Contactvendor.png"> View Image</a>
+            <a class="openModal" data-img="images/contactvendor.png"> Check this.</a>
 
             Contact the Support Team to resolve the issue.
           </li>
-          <li>🔄 Configuration error → Check <code>&nbsp;config.json file&nbsp;</code> in <b>(/home/pi/EVA)</b></li>
+          <li>🔄 Configuration error → Check <code>config.json file</code> in <b>(/home/pi/EVA)</b></li>
           <li>🌐 Network unreachable → Check IP and DHCP settings <b>(/etc/dhcpcd.conf)</b></li>
+          <li>🔄 Find Device IP → Install Advance IP Scanner
+            <a href="https://www.advanced-ip-scanner.com/" class="download-btn" target="_blank">
+              ⬇️ Download IP Scanner
+            </a> <br>
+            Scan the network to find the device IP.
+          </li>
+        </ul>
+      </section>
+
+      <section id="customAudio">
+        <h2>7. Custom Audio Generator</h2>
+        <ul>
+          <li> Visit the site to convert text to audio →
+            <a href="https://luvvoice.com/" class="download-btn" target="_blank"> 🧷 Link </a>
+          </li>
+          <li> Input the text you want to convert to speech.</li>
+          <li> For Different language use Google Translate to generate text. </li>
+          <li> Adjust the text accordingly based on audio.</li>
+          <li> Select the desired voice and language options.</li>
+          <li> Click on the "Generate" button to generate the audio file.</li>
+          <li> Download the generated audio file to your computer.</li>
+          <li> Transfer the audio file to the EVA device using Filezilla.</li>
+          <li> Place the audio file in the appropriate directory on the EVA device. <b>(/home/pi/EVA/Audios)</b> </li>
+          <div class="note-box">
+            <strong>Mandatory:</strong> Audio file name should match the existing file name to play the audio.
+          </div>
+          
+          <li> Restart the EVA Device to apply the changes.</li>
         </ul>
       </section>
 
       <section id="commands">
-        <h2>7. Commands Reference</h2>
+        <h2>8. Commands Reference</h2>
         <pre>
 # Get MAC via Command Prompt
       -> python3
@@ -238,7 +208,7 @@
       </section>
 
       <section id="Contact">
-        <h2>8. Contact</h2>
+        <h2>9. Contact</h2>
         <p>If you have any questions or need further assistance, please reach out to our support team:</p>
         <ul>
           <li>Email: support@raxgbc.co.in</li>
@@ -247,8 +217,10 @@
       </section>
 
       <footer>
-        <p> <strong>EVA Documentation • Generated on 23-08-2025 </strong></p>
-        <p> <strong>© 2025 Rax-Tech International. All rights reserved. | Version 1.0</strong></p>
+        <b>
+          <p>EVA Documentation • Generated on 23-08-2025</p>
+          <p>© 2025 Rax-Tech International. All rights reserved. | Version 1.0</p>
+        </b>
       </footer>
     </main>
   </div>
